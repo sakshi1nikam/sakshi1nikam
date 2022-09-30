@@ -1,4 +1,5 @@
-Length of last word 
+Length of last word :- 
+
 class Solution {
 public:
     int lengthOfLastWord(string s) { 
@@ -10,5 +11,20 @@ public:
             tail--;
         }
         return len;
+    }
+};
+
+Excel sheet column number :-
+
+class Solution {
+public:
+    int titleToNumber(string columnTitle) {
+        int res = 0 ;
+        for( char c: columnTitle)
+        {
+            int d = c - 'A' + 1;
+            res = res * 26 + d;
+        }
+        return res;
     }
 };
