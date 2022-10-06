@@ -87,3 +87,13 @@ Delete duplicate element :-
 Delete p1 FROM Person p1,
 Person p2
 Where p1.Email=p2.Email AND p1.Id > p2.Id;
+
+Big Countries :-
+
+Select name , population , area 
+From World
+Where area >= 3000000 
+Union  
+Select name , population , area 
+From World
+Where population >=25000000;
