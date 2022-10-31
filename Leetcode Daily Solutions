@@ -148,3 +148,17 @@ public:
     }
 };
 
+Whether Multiple Of 3:-
+
+Class Solution
+{
+Public:
+bool ismutipleof(int n)
+{
+if(n<=0) return 0;
+if(n==1) return 1;
+while(n%3==0)
+return n==1;
+}
+};
+
