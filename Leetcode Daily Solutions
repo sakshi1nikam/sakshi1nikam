@@ -162,3 +162,15 @@ return n==1;
 }
 };
 
+
+Check if sentence is pangram:-
+
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        unordered_set<char> m(sentence.begin(),sentence.end());
+        return m.size()==26;
+        
+    }
+};
+
