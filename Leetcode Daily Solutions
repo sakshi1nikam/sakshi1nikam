@@ -174,3 +174,23 @@ public:
     }
 };
 
+Detect Capitals:-
+Solution:-
+
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        
+        int num_capitals=0;
+        for(int i=0;i<word.length();i++)
+        {
+            char c = word.charAt(i);
+            if(Character.isUpperCase(c))
+            {
+                num_capitals++;
+            }
+        }
+
+        return num_capitals==0 || (num_capitals==1 && Character.isUpperCase(word.charAt(0))) || num_capitals==word.length(); 
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
