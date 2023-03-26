@@ -207,3 +207,30 @@ class Solution {
             }
         }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Is Subsequence :-
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        
+        if(s.length()==0) return true;
+
+        char ss [] = s.toCharArray();
+        char tt [] = t.toCharArray();
+
+        int t_pointer = 0;
+        int s_pointer = 0;
+
+        while(t_pointer < t.length())
+        {
+             if(tt[t_pointer] == ss[s_pointer])
+             {
+                 s_pointer++;
+
+                 if(s_pointer == s.length()) return true;
+             }
+             t_pointer++;
+        }
+
+        return false;
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
