@@ -315,3 +315,34 @@ class Solution {
 
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Linked list cycle II :-
+
+ListNode slow = head;
+    ListNode fast = head;
+    
+    // Finding the meeting point of the slow and fast pointers
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow == fast) {
+            break;
+        }
+    }
+    
+    // If there's no cycle, return null
+    if (fast == null || fast.next == null) {
+        return null;
+    }
+    
+    // Resetting the slow pointer to the head of the linked list
+    slow = head;
+    
+    // Moving both pointers at the same speed until they meet again
+    while (slow != fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    
+    // Returning the start node of the cycle
+    return slow;
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------
