@@ -346,3 +346,29 @@ ListNode slow = head;
     // Returning the start node of the cycle
     return slow;
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Best time to buy and sell stocks:-
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        
+        int min = Integer.MAX_VALUE;
+        int profit=0;
+        int overall_profit=0;
+        for(int i=0;i<prices.length;i++)
+        {
+            if(min>prices[i])
+            {
+                min=prices[i];
+            }
+
+            profit=prices[i]-min;
+
+            if(overall_profit<profit)
+            {
+                overall_profit=profit;
+            }
+        }
+        return overall_profit;
+    }
+    }
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------
